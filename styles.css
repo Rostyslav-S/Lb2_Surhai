@@ -1,0 +1,52 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.accordion {
+	width: 50%;
+	margin: 20px auto;
+}
+
+.accordion input {
+	display: none;
+}
+
+.accordion label {
+	cursor: pointer;
+	display: block;
+	padding: 10px;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 20px;
+	text-align: center;
+	color: #ffffff;
+	background: linear-gradient(#49708f, #293f50);
+}
+
+.accordion label:hover {
+	color: #97FFA3; 
+	transition: color 0.5s;
+}
+
+.accordion input:checked + label{
+	background: linear-gradient(#FF4051, #812028);
+}
+
+.accordion_body {
+	border: 0px solid #812028;
+	background: #F0F0F0;
+	overflow: hidden;
+    height: 0px;
+    transition: height 0.3s, border 0.1s 0.2s;
+}
+
+.accordion input:checked ~ .accordion_body {
+	border: 2px solid #812028;
+	height: 150px;
+	transition: 0.3s height;
+}
+
+.accordion_body p {
+	padding: 10px;
+	font-size: 16px;
+}
